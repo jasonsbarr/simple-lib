@@ -1,16 +1,5 @@
-# New Project Setup
+# Simple JavaScript Library
 
-This is my current boilerplate for setting up a JS project.
+A simple, stdlib-ish library of mostly functions intended for use in my [Introduction to Computer Science and Programming in JavaScript](https://github.com/jasonsbarr/intro-to-programming-javascript) course.
 
-It includes configuration to build packages that can be imported either with ES2015 `import` or CommonJS `require`, as well as included in the browser in a `script` tag.
-
-It also includes basic linting and formatting, generating documentation with JSDoc, test configuration with Jest, and a simple Babel setup. There are also Git hooks for pre-commit (linting and formatting) as well as pre-push (running unit tests). These hooks can be bypassed with the Git `--no-verify` option.
-
-The new project includes the MIT license by default, but you can change that if you want.
-
-Also, if you're not me, you'll probably want to change the `author` info in `package.json`.
-
-After cloning or downloading this repo, I recommend running `npm init` to customize your project's info and then `npm install` to install the necessary dev dependencies. There are no production dependencies defined.
-
-Then you should probably replace the info in this README to describe your project.
-
+This is not intended to be a complete standard library for JavaScript. Its main purpose is to fill in some functionalities that would be nice to have in the language with a focus on pedagogical use. It simplifies and generalizes some APIs available in the JavaScript language itself, contains utility functions, and adds new data types and functions for working with them.
