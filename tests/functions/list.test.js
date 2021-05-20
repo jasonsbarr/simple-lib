@@ -1,4 +1,11 @@
-import { cons, list, isEmpty } from "../../src/functions/list.js";
+import {
+  cons,
+  list,
+  isEmpty,
+  isList,
+  first,
+  rest,
+} from "../../src/functions/list.js";
 
 describe("cons function", () => {
   test("It should construct a valid Cons type", () => {
@@ -33,4 +40,18 @@ describe("isEmpty should determine if a list is empty or not", () => {
 describe("isList should determine if a value is a valid list", () => {
   expect(isList(1)).toEqual(false);
   expect(isList(list(1, 2, 3))).toEqual(true);
+});
+
+describe("first should return the first element in a list", () => {
+  expect(first(list(1))).toEqual(1);
+  expect(first(list(1, 2, 3))).toEqual(1);
+  expect(() => first(null)).toThrow();
+  expect(() => first({ a: "hi" })).toThrow();
+});
+
+describe("rest should return the rest of a list", () => {
+  expect(rest(list(1))).toEqual(null);
+  expect(rest(list(1, 2, 3))).toEqual([2, [3, null]]);
+  expect(() => rest(null)).toThrow();
+  expect(() => rest({ a: "hi" })).toThrow();
 });
