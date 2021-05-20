@@ -1,9 +1,5 @@
 import Cons from "../types/Cons.js";
 
-function isCons(obj) {
-  return obj instanceof Cons;
-}
-
 export function cons(first, last) {
   return new Cons(first, last);
 }
@@ -19,6 +15,10 @@ export function list(...args) {
     return cons(args[0], null);
   }
   return cons(args[0], list(...args.slice(1)));
+}
+
+export function isCons(obj) {
+  return obj instanceof Cons;
 }
 
 export function isEmpty(lst) {
